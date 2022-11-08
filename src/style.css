@@ -1,0 +1,156 @@
+body {
+    background-color: #F0F4EF;
+    font-family: "Montserrat";
+    font-family: "montserratthin"
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+@font-face {
+    font-family: 'montserratthin';
+    src: url('./Fonts/montserrat-variablefont_wght-webfont.woff2') format('woff2'),
+         url('./Fonts/montserrat-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+  
+
+.navBar {
+    display: flex;
+    background-color: #c94f4f;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0 20px 0;
+}
+
+.navBarUL {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.logo {
+    padding-left: 3.5rem;
+}
+
+.footer {
+    display: flex;
+    background-color: #24292E;
+    color: white;
+    height: 125px;
+    justify-content: space-around;
+}
+
+.footerMenu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+}
+.footerMenu li {
+    padding-bottom: 1rem;
+}
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+}
+
+.footerInfo :first-child {
+    margin-left: -100%;
+    margin-right: -100%;
+    text-align: center;}
+.Github {
+    margin-top: 15px;
+    background-image: url('./Giticon.png');
+    height: 32px;
+    width: 32px;
+    filter: invert(1)
+}
+.footerReferences {
+    display: flex;
+    align-items: center;
+    width: 125px;
+
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.mainBottom {
+    grid-column-start: 1;
+    grid-column-end: 3
+}
+
+.borscht {
+    height: 550px;
+    width: 650px;
+}
+.mainLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mainLeft p {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.mainBottom {
+    display: flex;
+    justify-content: space-around;
+}
+.bottomIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.icon {
+    height: 50px;
+}
+
+.foodMenu {
+    transition: 2s;
+}
+
+.mainCourse {
+    display: grid;
+    grid-template-columns:   repeat(4, minmax(100px, 1fr));
+    grid-template-rows: 250px;
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+.dessert {
+    display: grid;
+    grid-template-columns:   repeat(4, minmax(100px, 1fr));
+    grid-template-rows: 250px;
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+.foodPic {
+    height: 150px;
+    width: 200px
+}
+
+.foodItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
