@@ -1,7 +1,7 @@
 const footerClass = document.getElementsByClassName('footer')
 const contentID = document.getElementById('content')
 
-function menuPage() {
+function aboutPage() {
     const about = document.createElement('div')
     about.className = "about"
     contentID.appendChild(about)
@@ -12,4 +12,8 @@ function menuPage() {
 
     header.innerHTML = "Russian cuisine in your backyard"
     paragraph.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos voluptas illum tenetur culpa tempore facilis at debitis doloribus, ducimus laudantium praesentium et aut rem ea labore maxime molestiae ipsum repellendus ullam! Similique, "
+
+    about.appendChild(header)
+    about.appendChild(paragraph)
 }
+export default aboutPage

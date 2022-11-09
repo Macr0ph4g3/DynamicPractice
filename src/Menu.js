@@ -7,16 +7,14 @@ import Napoleon from "./Images/Napoleon.jpeg"
 import Shashlik from "./Images/Shashlik.jpeg"
 import Baklava from "./Images/Baklava.png"
 
-
-function menuPage() {
-    const footerClass = document.getElementsByClassName('footer')
+const footerClass = document.getElementsByClassName('footer')
 const contentID = document.getElementById('content')
 
+function menuPage() {
     const foodMenu = document.createElement('div')
     foodMenu.className = "foodMenu"
     contentID.appendChild(foodMenu)
     contentID.insertBefore(foodMenu, footerClass[0])
-
     const mainCourse = document.createElement('div')
     const dessert = document.createElement('div')
 
@@ -72,7 +70,7 @@ function foodItemFill() {
 
     foodDescript[0].innerHTML = `Beef Stroganoff`
     foodDescript[1].innerHTML = `Shashlik`
-    foodDescript[2].innerHTML = `OlivierSalad`
+    foodDescript[2].innerHTML = `Olivier Salad`
     foodDescript[3].innerHTML = `Vareniki`
     foodDescript[4].innerHTML = `Blintz`
     foodDescript[5].innerHTML = `HoneyCake`
@@ -81,4 +79,5 @@ function foodItemFill() {
 
 
 }
-export default menuPage 
+
+export default menuPage

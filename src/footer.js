@@ -41,4 +41,4 @@ contact.textContent = "Contact"
 footerReferences.innerHTML = "Icons provided by SmashIcons"
 
 }
-export default footer()
+export default footer

@@ -1,9 +1,9 @@
 const footerClass = document.getElementsByClassName('footer')
 const contentID = document.getElementById('content')
 
-function menuPage() {
+function contactPage() {
     const about = document.createElement('div')
-    about.className = "about"
+    about.className = "contact"
     contentID.appendChild(about)
     contentID.insertBefore(about, footerClass[0])
 
@@ -16,3 +16,5 @@ function menuPage() {
     about.appendChild(header)
     about.appendChild(paragraph)
 }
+
+export default contactPage

@@ -4,7 +4,15 @@ import mainPage from './mainPage'
 import footer from './footer'
 import './style.css';
 import menuPage from './Menu'
+import removeDiv from './removediv.js'
+import aboutjs from './about.js'
+import contactjs from './contact.js'
 
+
+//initialization of website
+navBarsetup()
+    mainPage()
+    footer()
 let menuButtons = document.getElementsByClassName("Menu")
 let homeButton = document.getElementsByClassName("logo")
 let about = document.getElementsByClassName("About")
@@ -12,36 +20,72 @@ let contact = document.getElementsByClassName("Contact")
 
 let mainDiv = document.getElementsByClassName('main')
 let menuDiv = document.getElementsByClassName('foodMenu')
+let content = document.getElementById('content')
 
+homeButton[0].addEventListener("click", clicked => {
+    homeSetup()
+} )
 
 
 for (let i = 0; i < menuButtons.length; i++) {
-    menuButtons[i].addEventListener("click", changePage => {
-        // This will remove MainPage.js and will import new Menu page
-            mainDiv[0].remove();
-            menuPage()
-
-        
-    })    
+    menuButtons[i].addEventListener("click", clicked => {
+        menuSetup()
+    } )
 }
 
 for (let i = 0; i < about.length; i++) {
-    about[i].addEventListener("click", changePage => {
-        // This will remove MainPage.js and will import new Menu page
-        console.log('About!')
-        
-    })    
+    about[i].addEventListener("click", clicked => {
+        aboutSetup() 
+       } )
 }
 for (let i = 0; i < contact.length; i++) {
-    contact[i].addEventListener("click", changePage => {
-        // This will remove MainPage.js and will import new Menu page
-        console.log('contact!')
-        
-    })    
+    contact[i].addEventListener("click",  clicked => {
+        contactSetup()
+        } )
 }
 
-homeButton[0].addEventListener("click", logging => {
-    console.log("clicked")
-    mainPage()
 
-})
+function homeSetup(){
+let centerDiv = content.firstChild.nextSibling.className
+    //this function replaces the second child of div id Content
+    //Change this to !==
+    if ( centerDiv !== 'main') {
+        let firstChildContent = content.firstChild.nextSibling
+        firstChildContent.remove()
+        console.log(firstChildContent)
+        mainPage()
+    }
+}
+function menuSetup(){
+    let centerDiv = content.firstChild.nextSibling.className
+
+    if ( centerDiv !== 'foodMenu') {
+        let firstChildContent = content.firstChild.nextSibling
+        firstChildContent.remove()
+        console.log(firstChildContent)
+        menuPage()
+    }
+
+}
+function aboutSetup(){
+    let centerDiv = content.firstChild.nextSibling.className
+
+    if ( centerDiv !== 'about') {
+        let firstChildContent = content.firstChild.nextSibling
+        firstChildContent.remove()
+        console.log(firstChildContent)
+    aboutjs()
+    }
+
+}
+function contactSetup(){
+    let centerDiv = content.firstChild.nextSibling.className
+
+    if ( centerDiv !== 'main') {
+        let firstChildContent = content.firstChild.nextSibling
+        firstChildContent.remove()
+        console.log(firstChildContent)
+        contactjs()
+    }
+
+}

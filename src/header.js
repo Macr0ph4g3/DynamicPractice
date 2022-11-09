@@ -32,4 +32,4 @@ about.textContent = "About"
 contact.textContent = "Contact"
 
 }
-export default navBarsetup()
+export default navBarsetup

@@ -5,6 +5,7 @@ import curry from './Images/curry.png'
 import wineglasses from './Images/wine-glasses.png'
 
 function mainPage(){
+    const footerClass = document.getElementsByClassName('footer')
     const contentID = document.getElementById('content')
 
 // This is the Navbar creation
@@ -16,6 +17,10 @@ function mainPage(){
     const mainBottom = document.createElement("div");
 
     contentID.appendChild(main);
+
+    contentID.appendChild(main)
+    contentID.insertBefore(main, footerClass[0])
+
     main.appendChild(mainLeft);
     main.appendChild(mainRight);
     main.appendChild(mainBottom);
@@ -83,4 +88,4 @@ function mainPage(){
 }
 
 
-export default mainPage()
+export default mainPage
