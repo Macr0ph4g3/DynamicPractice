@@ -1,5 +1,7 @@
+import github from "./Giticon.png"
+
 const footer = function() {
-    
+
 const contentID = document.getElementById('content')
 
 const footer = document.createElement("div")
@@ -28,16 +30,22 @@ footerMenu.appendChild(foodMenu)
 footerMenu.appendChild(about)
 footerMenu.appendChild(contact)
 
-const githubIcon = document.createElement("div")
+const githubLink = document.createElement("a")
 const authorInfo = document.createElement("div")
+const githubImg = document.createElement("img")
+
 footerInfo.appendChild(authorInfo)
-footerInfo.appendChild(githubIcon)
+footerInfo.appendChild(githubLink)
+githubLink.appendChild(githubImg)
+
 authorInfo.textContent = "Created by Macrophage"
-githubIcon.className = 'Github'
+githubLink.className = 'Github'
 foodMenu.textContent = "Menu"
 about.textContent = "About"
 contact.textContent = "Contact"
+githubLink.setAttribute("href", 'https://github.com/Macr0ph4g3' )
 
+githubImg.setAttribute("src", github)
 footerReferences.innerHTML = "Icons provided by SmashIcons"
 
 }

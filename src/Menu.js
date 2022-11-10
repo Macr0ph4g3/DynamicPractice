@@ -17,12 +17,21 @@ function menuPage() {
     contentID.insertBefore(foodMenu, footerClass[0])
     const mainCourse = document.createElement('div')
     const dessert = document.createElement('div')
+    const mainCourseHeader = document.createElement('h1')
+    const dessertHeader = document.createElement('h1')
 
+    foodMenu.appendChild(mainCourseHeader)
     foodMenu.appendChild(mainCourse)
+    foodMenu.appendChild(dessertHeader)
     foodMenu.appendChild(dessert)
 
     mainCourse.className = 'mainCourse'
     dessert.className = 'dessert'
+    mainCourseHeader.innerHTML = "Main Courses"
+    dessertHeader.innerHTML = "Desserts"
+    mainCourseHeader.className = "header"
+    dessertHeader.className = "header"
+
 
     for (let i = 0; i < 4; i++) {
         let foodItem = document.createElement('div')
@@ -30,12 +39,11 @@ function menuPage() {
         mainCourse.appendChild(foodItem)
 
         let foodPic = document.createElement('img')
-        let foodDescrip = document.createElement('h1')
+        let foodDescrip = document.createElement('h2')
         foodPic.className = `foodPic`
         foodDescrip.className = 'foodDescript'
         foodItem.appendChild(foodPic)
         foodItem.appendChild(foodDescrip)
-
     }
 
     for (let i = 0; i < 4; i++) {
@@ -44,7 +52,7 @@ function menuPage() {
         dessert.appendChild(dessertItem)
 
         let foodPic = document.createElement('img')
-        let foodDescrip = document.createElement('h1')
+        let foodDescrip = document.createElement('h2')
         foodPic.className = `foodPic`
         foodDescrip.className = 'foodDescript'
         dessertItem.appendChild(foodPic)

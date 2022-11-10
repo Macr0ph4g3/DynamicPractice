@@ -26,6 +26,7 @@ ul {
     margin: 1.5rem 0 20px 0;
 }
 
+
 .navBarUL {
     display: flex;
     width: 50%;
@@ -64,15 +65,15 @@ ul {
 }
 
 .footerInfo :first-child {
-    margin-left: -100%;
-    margin-right: -100%;
     text-align: center;}
 .Github {
     margin-top: 15px;
-    background-image: url('./Giticon.png');
     height: 32px;
     width: 32px;
     filter: invert(1)
+}
+.Github:hover {
+    filter: invert(.8);
 }
 .footerReferences {
     display: flex;
@@ -153,4 +154,51 @@ ul {
     flex-direction: column;
     align-items: center;
 
+}
+
+.Menu:hover {
+    color: rgb(236, 202, 145);
+}
+
+.About:hover {
+    color: rgb(236, 202, 145);
+}
+.Contact:hover {
+    color: rgb(236, 202, 145);
+}
+.logo:hover {
+    color: rgb(236, 202, 145);
+
+}
+
+.aboutMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 15px;
+}
+.contactMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 15px;
+
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dessertItem {
+ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    
 }

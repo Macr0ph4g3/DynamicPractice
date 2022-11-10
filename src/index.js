@@ -11,38 +11,31 @@ import contactjs from './contact.js'
 
 //initialization of website
 navBarsetup()
-    mainPage()
-    footer()
+mainPage()
+footer()
+
+//caching parts of site into variables
+
 let menuButtons = document.getElementsByClassName("Menu")
 let homeButton = document.getElementsByClassName("logo")
 let about = document.getElementsByClassName("About")
 let contact = document.getElementsByClassName("Contact")
-
 let mainDiv = document.getElementsByClassName('main')
 let menuDiv = document.getElementsByClassName('foodMenu')
 let content = document.getElementById('content')
 
+//Event Listeners for each button
 homeButton[0].addEventListener("click", clicked => {
-    homeSetup()
-} )
-
-
+    homeSetup()})
 for (let i = 0; i < menuButtons.length; i++) {
     menuButtons[i].addEventListener("click", clicked => {
-        menuSetup()
-    } )
-}
-
+        menuSetup()})}
 for (let i = 0; i < about.length; i++) {
     about[i].addEventListener("click", clicked => {
-        aboutSetup() 
-       } )
-}
+        aboutSetup()})}
 for (let i = 0; i < contact.length; i++) {
     contact[i].addEventListener("click",  clicked => {
-        contactSetup()
-        } )
-}
+        contactSetup()})}
 
 
 function homeSetup(){
@@ -70,7 +63,7 @@ function menuSetup(){
 function aboutSetup(){
     let centerDiv = content.firstChild.nextSibling.className
 
-    if ( centerDiv !== 'about') {
+    if ( centerDiv !== 'aboutMain') {
         let firstChildContent = content.firstChild.nextSibling
         firstChildContent.remove()
         console.log(firstChildContent)
